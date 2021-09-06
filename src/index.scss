@@ -1,0 +1,190 @@
+@import 'carbon-components/scss/globals/scss/styles.scss';
+
+@import 'carbon-components/scss/globals/grid/grid';
+
+$feature-flags: (
+        grid-columns-16: true,
+);
+
+@import '@carbon/motion/scss/motion.scss';
+.my-custom-selector {
+  // Supplies the standard easing curve, using the productive mode by default
+  transition-timing-function: carbon--motion(standard);
+}
+
+.default-anim {
+  // Supplies the standard easing curve, but with the expressive mode, on the
+  // transition-timing-function property for this selector
+  @include carbon--motion(standard, expressive);
+}
+
+@font-face {
+  font-family: 'gilroy';
+
+  src: url('assets/fonts/gilroy/gilroy-bold-webfont.eot');
+
+  src: url('assets/fonts/gilroy/gilroy-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/gilroy/gilroy-bold-webfont.woff2') format('woff2'),
+  url('assets/fonts/gilroy/gilroy-bold-webfont.woff') format('woff'),
+  url('assets/fonts/gilroy/gilroy-bold-webfont.svg#gilroy-bolduploaded_file') format('svg');
+
+  font-weight: 600;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+
+  src: url('assets/fonts/gilroy/gilroy-heavy-webfont.eot');
+
+  src: url('assets/fonts/gilroy/gilroy-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/gilroy/gilroy-heavy-webfont.woff2') format('woff2'),
+  url('assets/fonts/gilroy/gilroy-heavy-webfont.woff') format('woff'),
+  url('assets/fonts/gilroy/gilroy-heavy-webfont.svg#gilroy-heavyuploaded_file') format('svg');
+
+  font-weight: 700;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+
+  src: url('assets/fonts/gilroy/gilroy-light-webfont.eot');
+
+  src: url('assets/fonts/gilroy/gilroy-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/gilroy/gilroy-light-webfont.woff2') format('woff2'),
+  url('assets/fonts/gilroy/gilroy-light-webfont.woff') format('woff'),
+  url('assets/fonts/gilroy/gilroy-light-webfont.svg#gilroy-lightuploaded_file') format('svg');
+
+  font-weight: 300;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+
+  src: url('assets/fonts/gilroy/gilroy-medium-webfont.eot');
+
+  src: url('assets/fonts/gilroy/gilroy-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/gilroy/gilroy-medium-webfont.woff2') format('woff2'),
+  url('assets/fonts/gilroy/gilroy-medium-webfont.woff') format('woff'),
+  url('assets/fonts/gilroy/gilroy-medium-webfont.svg#gilroy-mediumuploaded_file') format('svg');
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+
+  src: url('assets/fonts/gilroy/gilroy-regular-webfont.eot');
+
+  src: url('assets/fonts/gilroy/gilroy-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/gilroy/gilroy-regular-webfont.woff2') format('woff2'),
+  url('assets/fonts/gilroy/gilroy-regular-webfont.woff') format('woff'),
+  url('assets/fonts/gilroy/gilroy-regular-webfont.svg#gilroy-regularuploaded_file') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera';
+
+  src: url('assets/fonts/cera/cera_pro_light-webfont.eot');
+
+  src: url('assets/fonts/cera/cera_pro_light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/cera/cera_pro_light-webfont.woff2') format('woff2'),
+  url('assets/fonts/cera/cera_pro_light-webfont.woff') format('woff'),
+  url('assets/fonts/cera/cera_pro_light-webfont.svg#cera-lightuploaded_file') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera';
+
+  src: url('assets/fonts/cera/cera_pro_medium-webfont.eot');
+
+  src: url('assets/fonts/cera/cera_pro_medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/cera/cera_pro_medium-webfont.woff2') format('woff2'),
+  url('assets/fonts/cera/cera_pro_medium-webfont.woff') format('woff'),
+  url('assets/fonts/cera/cera_pro_medium-webfont.svg#cera-mediumuploaded_file') format('svg');
+
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera';
+
+  src: url('assets/fonts/cera/cera_pro_bold-webfont.eot');
+
+  src: url('assets/fonts/cera/cera_pro_bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/cera/cera_pro_bold-webfont.woff2') format('woff2'),
+  url('assets/fonts/cera/cera_pro_bold-webfont.woff') format('woff'),
+  url('assets/fonts/cera/cera_pro_bold-webfont.svg#cera-bolduploaded_file') format('svg');
+
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cera';
+
+  src: url('assets/fonts/cera/cera_pro_black-webfont.eot');
+
+  src: url('assets/fonts/cera/cera_pro_black-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/cera/cera_pro_black-webfont.woff2') format('woff2'),
+  url('assets/fonts/cera/cera_pro_black-webfont.woff') format('woff'),
+  url('assets/fonts/cera/cera_pro_black-webfont.svg#cera-blackuploaded_file') format('svg');
+
+  font-weight: 700;
+  font-style: normal;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: 'cera', 'gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.bx--grid {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    .card-item {
+      flex: 1 0 50%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    .card-item {
+      flex: 1 0 50%;
+    }
+  }
+}
