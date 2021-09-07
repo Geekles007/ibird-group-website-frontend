@@ -1,7 +1,6 @@
 import {memo, useCallback, useState} from "react";
 import styled, {keyframes} from "styled-components";
 import clapper from './../../../../assets/icons/clapping.png';
-import {TooltipDefinition} from "carbon-components-react";
 
 const bomb = keyframes`
     0%{
@@ -45,7 +44,7 @@ const ClapWrapper = styled.a`
     
     &:hover{
         .tooltip {
-            transform: translateY(-50px);
+            transform: translateY(-60px);
             opacity: 1;
         }
     }

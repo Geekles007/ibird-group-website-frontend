@@ -1,7 +1,6 @@
 import React, {memo, useEffect, useRef, useState} from "react";
 import {observer} from "mobx-react";
 import mapboxgl from 'mapbox-gl';
-import {MAP_BOX_TOKEN} from "../../constants";
 import styled from "styled-components";
 
 interface MapBoxUIProps {
@@ -12,7 +11,7 @@ const MapWrapper = styled.div`
     height: 100%;
 `;
 
-mapboxgl.accessToken = MAP_BOX_TOKEN;
+mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX_TOKEN ?? "";
 
 const MapBoxUI: React.FC<MapBoxUIProps> = ({}) => {
     const mapContainer: any = useRef(null);

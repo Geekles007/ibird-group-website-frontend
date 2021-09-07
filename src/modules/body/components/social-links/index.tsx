@@ -5,32 +5,35 @@ import dribbble from './../../../../assets/icons/004-dribbble.svg';
 import linkedIn from './../../../../assets/icons/005-linkedin.svg';
 
 const SocialWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    img {
-        width: 20px;
-    }
-    
-    a{
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 9;
+
+  img {
+    width: 20px;
+  }
+
+  a {
     cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li:last-child {
+      margin-bottom: 0;
     }
-    
-    ul {
-    
-        li:last-child {
-            margin-bottom: 0;
-        }
-        
-        li {
-            margin-bottom: 15px;
-        }
+
+    li {
+      margin-bottom: 15px;
     }
+  }
 `;
 
 const SocialLinksUI: React.FC<{}> = () => {

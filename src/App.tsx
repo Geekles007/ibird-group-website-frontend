@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import MainUI from "./modules/main";
-import {Switch} from "react-router-dom";
+import {Switch, withRouter} from "react-router-dom";
 import HeaderUI from "./layout/header";
 import styled from "styled-components";
 import ThemeStore from "./store/ThemeStore";
@@ -20,6 +20,7 @@ function App() {
             ThemeStore={ThemeStore}
             DialogStore={DialogStore}
         >
+
             <AppWrapper>
                 <HeaderUI />
                 <Switch>
@@ -31,4 +32,4 @@ function App() {
     );
 }
 
-export default App;
+export default withRouter(App);

@@ -1,6 +1,6 @@
 import React, {memo} from "react";
 import styled from "styled-components";
-import {dribbble_api, SHOTS_PER_PAGE} from "../../../../constants";
+import {SHOTS_PER_PAGE} from "../../../../constants";
 import axios from 'axios';
 import ImageCard from "../../../../common/image-card";
 import LoaderUI from "../../../../common/loader";
@@ -51,7 +51,7 @@ const GalleryPortfolio: React.FC<{}> = () => {
         async function getDribbblePosts() {
             try {
                 const dribbbleRes = await axios.get(
-                    `https://api.dribbble.com/v2/user/shots?access_token=${dribbble_api.ACCESS_TOKEN}&page=${dribbblePage}&per_page=${SHOTS_PER_PAGE}`,
+                    `https://api.dribbble.com/v2/user/shots?access_token=${process.env.REACT_APP_ACCESS_TOKEN}&page=${dribbblePage}&per_page=${SHOTS_PER_PAGE}`,
                 );
 
                 setDribbblePosts([...dribbblePosts, ...dribbbleRes?.data]);

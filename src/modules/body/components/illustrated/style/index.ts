@@ -37,8 +37,8 @@ export const BgWrapper = styled.div`
             font-size: 3em;
             position: absolute;
             right: -20px;
-            top: -20px;
-            transform: rotate(15deg);
+            top: -25px;
+            transform: rotate(5deg);
         }
     }
     
