@@ -5,7 +5,6 @@ import MapBoxUI from "../../common/map-box";
 import {DateTime} from "luxon";
 
 const FooterWrapper = styled.div`
-  width: 100vw;
   background-color: #000;
   
   .top-footer {

@@ -11,7 +11,6 @@ import ModalUI from "./common/modal-module";
 
 const AppWrapper = styled.div`
     width: 100%;
-    overflow-x: hidden;
 `;
 
 function App() {

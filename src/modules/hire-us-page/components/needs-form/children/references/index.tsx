@@ -2,7 +2,7 @@ import React, {memo} from "react";
 import styled from "styled-components";
 import {stepLink} from "../../../../../../constants";
 
-const BackInfoWrapper = styled.div`
+const ReferencesWrapper = styled.div`
   
   h2 {
     font-weight: 500;
@@ -10,21 +10,21 @@ const BackInfoWrapper = styled.div`
   }
   
   ._container {
-    height: 1000px;
+
   }
 `;
 
-const BackInfoUI = () => {
+const ReferencesUI = () => {
 
     return (
-        <BackInfoWrapper id={stepLink.BACK_INFO}>
-            <h2>Background informations</h2>
+        <ReferencesWrapper id={stepLink.REFERENCES}>
+            <h2>References</h2>
             <div className="_container">
 
             </div>
-        </BackInfoWrapper>
+        </ReferencesWrapper>
     );
 
 }
 
-export default memo(BackInfoUI);
+export default memo(ReferencesUI);

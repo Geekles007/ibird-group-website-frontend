@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const HireUsPageWrapper = styled.div`
-  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
   
   .form-container {
     width: 100%;

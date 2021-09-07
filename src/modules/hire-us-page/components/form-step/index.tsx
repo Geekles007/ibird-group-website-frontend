@@ -15,8 +15,13 @@ const StepsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
-  background-color: #eee;
-  padding: 1em;
+  padding: 0 1em;
+  
+  position: sticky;
+  position: -webkit-sticky;
+  top: 1em;
+  
+  align-self: flex-start;
 `;
 
 const FormStepUI = () => {

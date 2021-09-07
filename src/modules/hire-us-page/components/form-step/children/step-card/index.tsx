@@ -10,8 +10,6 @@ interface StepCardProps{
 
 const StepCardUI = ({step, current, action}: StepCardProps) => {
 
-    console.log();
-
     return (
         <StepCardWrapper current={current} onClick={action} href={`#${step.linkTo}`}>
             <strong>{step.name}</strong>

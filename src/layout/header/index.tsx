@@ -1,6 +1,7 @@
 import {memo} from "react";
 import styled from "styled-components";
 import Logo from './../../assets/images/logo.svg';
+import {Link} from "react-router-dom";
 
 const HeaderWrapper = styled.div`
   position: absolute;
@@ -20,9 +21,9 @@ const HeaderUI: React.FC<{}> = () => {
 
     return (
         <HeaderWrapper>
-            <a href="/">
+            <Link to="/">
                 <img src={Logo} alt="iBIRD Design logo"/>
-            </a>
+            </Link>
         </HeaderWrapper>
     );
 

@@ -6,7 +6,6 @@ import ImageCard from "../../../../common/image-card";
 import LoaderUI from "../../../../common/loader";
 
 const GalleryWrapper = styled.div`
-    width: 100vw;
     min-height: 300px;
     padding: 3em 5em;
     
