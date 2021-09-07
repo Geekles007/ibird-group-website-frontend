@@ -9,4 +9,8 @@ export const HireUsPageWrapper = styled.div`
     padding: 3em 8em;
     display: flex;
   }
+  
+  .form-control {
+    margin: .5em 0 2em 0;
+  }
 `;

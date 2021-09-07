@@ -11,7 +11,7 @@ import Illustrated from "./components/illustrated";
 import GalleryPortfolio from "./components/gallery-portofolio";
 import FooterUI from './../../layout/footer'
 
-const BodyUI: React.FC<{}> = () => {
+const BodyUI = () => {
 
     return (
         <ThemeProvider theme={ThemeStore.CurrentTheme}>

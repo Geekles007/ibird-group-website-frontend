@@ -41,9 +41,9 @@ const SocialLinksUI: React.FC<{}> = () => {
     return (
         <SocialWrapper>
             <ul>
-                <li><a href="https://www.instagram.com/ibird.design/" target={"_blank"}><img src={instagram}/></a></li>
-                <li><a href="https://www.linkedin.com/company/64646551" target={"_blank"}><img src={linkedIn}/></a></li>
-                <li><a href="https://dribbble.com/geekles007" target={"_blank"}><img src={dribbble}/></a></li>
+                <li><a href="https://www.instagram.com/ibird.design/" rel="noreferrer" target={"_blank"}><img alt={"social media icon"} src={instagram}/></a></li>
+                <li><a href="https://www.linkedin.com/company/64646551" rel="noreferrer" target={"_blank"}><img alt={"social media icon"} src={linkedIn}/></a></li>
+                <li><a href="https://dribbble.com/geekles007" rel="noreferrer" target={"_blank"}><img alt={"social media icon"} src={dribbble}/></a></li>
             </ul>
         </SocialWrapper>
     );

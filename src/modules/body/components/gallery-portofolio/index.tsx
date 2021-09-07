@@ -43,7 +43,7 @@ const GalleryWrapper = styled.div`
 const GalleryPortfolio: React.FC<{}> = () => {
     const [isLoading, setIsLoading] = React.useState(true);
     const [isError, setIsError] = React.useState(false);
-    const [dribbblePage, setDribbblePage] = React.useState<any>(1);
+    const [dribbblePage] = React.useState<any>(1);
     const [dribbblePosts, setDribbblePosts] = React.useState<any>([]);
 
     React.useEffect(() => {

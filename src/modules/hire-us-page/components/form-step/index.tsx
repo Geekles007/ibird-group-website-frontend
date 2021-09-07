@@ -3,6 +3,8 @@ import styled from "styled-components";
 import FormStepsController from "./controller";
 import StepCardUI from "./children/step-card";
 import {stepLink} from "../../../../constants";
+import {FormProps} from "../needs-form/model/FormProps";
+import SubmitButtonHandler from "../needs-form/children/submit-handler";
 
 export interface IStep {
     id: string;
@@ -22,9 +24,20 @@ const StepsWrapper = styled.div`
   top: 1em;
   
   align-self: flex-start;
+  
+  .saving-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 4em;
+  }
 `;
 
-const FormStepUI = () => {
+interface FormStepUIProps {
+    form: FormProps;
+}
+
+const FormStepUI = ({form}: FormStepUIProps) => {
 
     const [current, setCurrent] = useState<string>("");
 
@@ -38,16 +51,19 @@ const FormStepUI = () => {
 
     return (
         <StepsWrapper>
-            {
-                FormStepsController.getSteps.map((step: IStep) => {
-                    return (
-                        <StepCardUI
-                            current={current === step.linkTo}
-                            action={() => setCurrentStep(step.linkTo ?? "")}
-                            step={step} key={step.id}/>
-                    );
-                })
-            }
+            <>
+                {
+                    FormStepsController.getSteps.map((step: IStep) => {
+                        return (
+                            <StepCardUI
+                                current={current === step.linkTo}
+                                action={() => setCurrentStep(step.linkTo ?? "")}
+                                step={step} key={step.id}/>
+                        );
+                    })
+                }
+            </>
+            <SubmitButtonHandler form={form} />
         </StepsWrapper>
     );
 

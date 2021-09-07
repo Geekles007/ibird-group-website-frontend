@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useState} from "react";
+import React, {memo} from "react";
 import {IStep} from "../../index";
 import {StepCardWrapper} from "./style/default";
 
