@@ -1,11 +1,10 @@
-import React, {memo} from "react";
-import KeyBuilder from "../../../../../../utils/KeyBuilder";
-import {TextInput} from "carbon-components-react";
-import {FormProps} from "../../model/FormProps";
+import {memo} from "react";
+import {FormProps} from "../../modules/hire-us-page/components/needs-form/model/FormProps";
+import {TextArea} from "carbon-components-react";
+import KeyBuilder from "../../utils/KeyBuilder";
 
-interface CustomInpuProps {
+interface CustomTextareaProps {
     helperText?: string;
-    type: string;
     id: string;
     register: any;
     defaultValue?: string;
@@ -13,11 +12,10 @@ interface CustomInpuProps {
     invalidText?: string;
     labelText: string | JSX.Element;
     placeholder?: string;
-    invalid?: string;
     form: FormProps;
 }
 
-const CustomInput = (input: CustomInpuProps) => {
+const CustomTextarea = (input: CustomTextareaProps) => {
 
     const onChange = (e: any) => {
         input.form.setValue(input.name, e.target.value);
@@ -25,8 +23,7 @@ const CustomInput = (input: CustomInpuProps) => {
 
     return (
         <>
-            <TextInput
-                type={input.type}
+            <TextArea
                 helperText={input.helperText}
                 id={input.id ?? KeyBuilder.build}
                 onChange={onChange}
@@ -35,11 +32,11 @@ const CustomInput = (input: CustomInpuProps) => {
                 invalidText={input.invalidText}
                 labelText={input.labelText}
                 placeholder={input.placeholder}
-                invalid={input?.invalid ? input.form?.errors[input?.invalid] !== undefined : false}
+                invalid={input?.form?.errors ? input.form?.errors[input.name] !== undefined : false}
             />
         </>
     );
 
 }
 
-export default memo(CustomInput);
+export default memo(CustomTextarea);

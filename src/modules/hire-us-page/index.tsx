@@ -7,28 +7,25 @@ import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import HireUsPageController from "./controller";
 import FooterUI from "../../layout/footer";
+import {IInfo} from "./components/needs-form/model/IInfo";
 
 /*
 This page will look exactly like 99designs contest's details page
  */
 
 const HireUsPage = () => {
-    const form: any = useForm({
+    const form: any = useForm<IInfo>({
         resolver: yupResolver(HireUsPageController.MySchema)
     });
 
-    const onSubmit = (data: any) => {
-        console.log(data)
-    };
-
     return (
         <HireUsPageWrapper>
-            <Banner />
-            <form onSubmit={form.handleSubmit(onSubmit)} className="form-container">
-                <FormStepUI form={form} />
-                <NeedsFormUI form={form} />
+            <Banner/>
+            <form className="form-container">
+                <FormStepUI form={form}/>
+                <NeedsFormUI form={form}/>
             </form>
-            <FooterUI />
+            <FooterUI/>
         </HireUsPageWrapper>
     );
 

@@ -30,6 +30,10 @@ const StepsWrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     margin-top: 4em;
+
+    .bx--inline-loading__text {
+      color: #fff !important;
+    }
   }
 `;
 

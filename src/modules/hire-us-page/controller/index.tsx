@@ -6,9 +6,9 @@ class HireUsPageController {
         return yup.object().shape({
             name: yup.string().required(),
             email: yup.string().email().required(),
-            slogan: yup.string().required(),
+            slogan: yup.string(),
             description: yup.string().required(),
-            sectors: yup.string().required(),
+            sector: yup.string(),
         });
     }
 }
