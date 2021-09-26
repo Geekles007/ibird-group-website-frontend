@@ -6,4 +6,5 @@ export interface IInfo {
     slogan: string;
     description: string;
     sector: string;
+    colors: string;
 }

@@ -1,8 +1,9 @@
-import {memo, useEffect} from "react";
+import {memo, useEffect, useState} from "react";
 import {ComboBox, Dropdown} from "carbon-components-react";
 import {BaseModel} from "../../model/BaseModel";
 import {FormProps} from "../../modules/hire-us-page/components/needs-form/model/FormProps";
 import KeyBuilder from "../../utils/KeyBuilder";
+import {ISector} from "../../modules/hire-us-page/components/needs-form/model/ISector";
 
 interface CustomDropdownProps<T extends BaseModel> {
     items: Map<string, T>;
@@ -28,13 +29,14 @@ const CustomDropdown = <V extends BaseModel>({
                                                  objectProperty
                                              }: CustomDropdownProps<V>) => {
 
-    let values: Array<string> = [];
+    const [values, setValues] = useState<Array<ISector>>([]);
 
     useEffect(() => {
         if(items && items?.size > 0) {
-            values = Array.from(items.keys());
+            setValues(() => Array.from(items.values()));
         }
-    }, [form, items])
+        console.log(values);
+    }, [setValues]);
 
     const onChange = (async (picked: { selectedItem: any | null | undefined }) => {
         if (!picked || !picked.selectedItem) {
@@ -42,7 +44,7 @@ const CustomDropdown = <V extends BaseModel>({
                 message: invalidText
             });
         } else {
-            const value = picked.selectedItem;
+            const value = picked.selectedItem?.id;
             form?.setValue(name, value);
         }
     })
@@ -56,10 +58,6 @@ const CustomDropdown = <V extends BaseModel>({
                 invalid={form?.errors ? form?.errors[name] !== undefined : false}
                 name={name}
                 items={values}
-                itemToString={(item: any) => {
-                    const elt = (items?.get(item));
-                    return elt ? elt.name : "";
-                }}
                 selectedItem={defaultValue as string}
                 onChange={onChange}
                 placeholder={placeholder ?? ''}

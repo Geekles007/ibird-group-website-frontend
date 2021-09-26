@@ -8,7 +8,7 @@ class BackInfoController {
             KeyBuilder.build,
             {
                 id: KeyBuilder.build,
-                name: "Agricultural products and services"
+                label: "Agricultural products and services"
             },
         ]
     ]);

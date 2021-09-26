@@ -7,7 +7,8 @@ class NeedsFormController {
         email: "email",
         description: "description",
         sector: "sector",
-        slogan: "slogan"
+        slogan: "slogan",
+        colors: "colors"
     };
 
 

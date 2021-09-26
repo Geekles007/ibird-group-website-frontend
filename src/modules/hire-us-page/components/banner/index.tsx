@@ -10,9 +10,7 @@ const BannerWrapper = styled.div`
 const Banner = () => {
 
     return (
-        <BannerWrapper>
-
-        </BannerWrapper>
+        <BannerWrapper />
     );
 
 }

@@ -1,6 +1,5 @@
 import {memo} from "react";
 import styled from 'styled-components';
-import {Form} from "carbon-components-react";
 import BackInfoUI from "./children/back-info";
 import VisualStyleUI from "./children/visual-style";
 import ReferencesUI from "./children/references";
@@ -24,7 +23,7 @@ const NeedsFormUI = ({form}: NeedsFormUIProps) => {
     return (
         <NeedsFormWrapper>
             <BackInfoUI form={form} />
-            <VisualStyleUI />
+            <VisualStyleUI form={form} />
             <ReferencesUI />
             <DeliverablesUI />
         </NeedsFormWrapper>
