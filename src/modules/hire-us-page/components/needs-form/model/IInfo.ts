@@ -7,4 +7,5 @@ export interface IInfo {
     description: string;
     sector: string;
     colors: string;
+    styleAttributes: string;
 }

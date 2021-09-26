@@ -8,7 +8,8 @@ class NeedsFormController {
         description: "description",
         sector: "sector",
         slogan: "slogan",
-        colors: "colors"
+        colors: "colors",
+        styleAttributes: "styleAttributes"
     };
 
 

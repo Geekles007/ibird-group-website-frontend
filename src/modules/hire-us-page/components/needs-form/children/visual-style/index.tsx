@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {stepLink} from "../../../../../../constants";
 import {FormProps} from "../../model/FormProps";
 import ColorPickerUI from "./components/color-picker";
+import StyleAttributeHandler from "./components/StyleAttributeHandler";
 
 const VisualStyleWrapper = styled.div`
   margin-bottom: 1em;
@@ -15,12 +16,15 @@ const VisualStyleWrapper = styled.div`
   
   ._container {
     
+    
   }
 `;
 
 interface VisualStyleUIProps {
     form: FormProps;
 }
+
+// TODO Put some details about each fields to make it easier to understand. (Like tooltips for example on each label)
 
 const VisualStyleUI = ({form}: VisualStyleUIProps) => {
 
@@ -34,7 +38,7 @@ const VisualStyleUI = ({form}: VisualStyleUIProps) => {
                 </div>
                 <div className={"form-control"}>
                     <label htmlFor="color">Style attributes</label>
-
+                    <StyleAttributeHandler form={form} />
                 </div>
             </div>
         </VisualStyleWrapper>

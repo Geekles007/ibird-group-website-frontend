@@ -1,5 +1,5 @@
 import React, {memo, useCallback, useState} from "react";
-import {ColorResult, GithubPicker} from "react-color";
+import {ColorResult, CompactPicker, GithubPicker} from "react-color";
 import styled from "styled-components";
 import KeyBuilder from "../../../../../../../../utils/KeyBuilder";
 import {Close32} from "@carbon/icons-react";
@@ -12,6 +12,7 @@ interface ColorPickerUIProps {
 const PickerWrapper = styled.div`
   display: flex;
   align-items: flex-start;
+  margin-top: 1em;
 
   ._picker {
     margin-top: 1em;
@@ -84,7 +85,7 @@ const ColorPickerUI = ({form}: ColorPickerUIProps) => {
 
     return (
         <PickerWrapper>
-            <GithubPicker onChangeComplete={onChangeHandler} className={"_picker"} />
+            <CompactPicker onChangeComplete={onChangeHandler} className={"_picker"} />
             <div className="_colors" key={refresher}>
                 {
                     (Array.from(colors.values())).map((item: ColorResult, index: number) => {
