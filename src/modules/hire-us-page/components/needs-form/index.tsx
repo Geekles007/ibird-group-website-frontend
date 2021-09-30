@@ -24,8 +24,8 @@ const NeedsFormUI = ({form}: NeedsFormUIProps) => {
         <NeedsFormWrapper>
             <BackInfoUI form={form} />
             <VisualStyleUI form={form} />
-            <ReferencesUI />
-            <DeliverablesUI />
+            <ReferencesUI form={form} />
+            <DeliverablesUI form={form} />
         </NeedsFormWrapper>
     );
 

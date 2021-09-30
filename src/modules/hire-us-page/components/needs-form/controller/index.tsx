@@ -9,7 +9,10 @@ class NeedsFormController {
         sector: "sector",
         slogan: "slogan",
         colors: "colors",
-        styleAttributes: "styleAttributes"
+        styleAttributes: "styleAttributes",
+        moreDetails: "moreDetails",
+        deliverablesDetails: "deliverablesDetails",
+        extensions: "extensions"
     };
 
 

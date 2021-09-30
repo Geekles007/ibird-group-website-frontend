@@ -8,4 +8,7 @@ export interface IInfo {
     sector: string;
     colors: string;
     styleAttributes: string;
+    moreDetails: string;
+    extensions: string;
+    deliverablesDetails: string;
 }
