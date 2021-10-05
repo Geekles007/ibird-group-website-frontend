@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="24a7761a-97b1-4cc7-bcac-d052fe12158a" name="ibird-server" url="http://143.198.160.49">
+        <fileTransfer rootFolder="/home" accessType="SFTP" host="143.198.160.49" port="22" sshConfigId="2397988f-6d2f-4abe-ae0c-19553fd9f4f6" sshConfig="root@143.198.160.49:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
