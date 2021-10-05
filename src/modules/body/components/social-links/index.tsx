@@ -43,7 +43,7 @@ const SocialLinksUI: React.FC<{}> = () => {
             <ul>
                 <li><a href="https://www.instagram.com/ibird.design/" rel="noreferrer" target={"_blank"}><img alt={"social media icon"} src={instagram}/></a></li>
                 <li><a href="https://www.linkedin.com/company/64646551" rel="noreferrer" target={"_blank"}><img alt={"social media icon"} src={linkedIn}/></a></li>
-                <li><a href="https://dribbble.com/geekles007" rel="noreferrer" target={"_blank"}><img alt={"social media icon"} src={dribbble}/></a></li>
+                <li><a href="https://dribbble.com/ibirddesign" rel="noreferrer" target={"_blank"}><img alt={"social media icon"} src={dribbble}/></a></li>
             </ul>
         </SocialWrapper>
     );
