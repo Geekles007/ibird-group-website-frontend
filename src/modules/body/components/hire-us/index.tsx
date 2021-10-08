@@ -1,10 +1,10 @@
 import {memo} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import {size} from "../../../../constants";
 
 const HireWrapper = styled.div`
   height: 60px;
-  width: 30em;
   max-width: 30em;
   background-color: #000;
   border-radius: .2em;
@@ -24,6 +24,7 @@ const HireWrapper = styled.div`
     color: #fff;
     font-weight: 500;
     font-size: 1em;
+    margin-right: 1em;
   }
 
   a {
@@ -44,6 +45,17 @@ const HireWrapper = styled.div`
 
     cursor: pointer;
   }
+    
+  @media (max-width: ${size.tablet}) {
+  
+    &{
+        
+    }
+
+    p {
+        display: none;
+    }
+  }
 `;
 
 const HireUsUI: React.FC<{}> = () => {
@@ -52,7 +64,7 @@ const HireUsUI: React.FC<{}> = () => {
         <HireWrapper>
             <p>We can't wait to make our creativity <br/>
                 and passion at your service </p>
-            <Link to={"/hire-us"} type={"button"}>HIRE US</Link>
+            <Link to={"#hire-us"} type={"button"}>HIRE US</Link>
         </HireWrapper>
     );
 

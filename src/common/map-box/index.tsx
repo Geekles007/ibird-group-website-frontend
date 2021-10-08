@@ -1,6 +1,6 @@
 import React, {memo, useEffect, useRef, useState} from "react";
-import {observer} from "mobx-react";
 import mapboxgl from 'mapbox-gl';
+import {observer} from "mobx-react";
 import styled from "styled-components";
 
 interface MapBoxUIProps {

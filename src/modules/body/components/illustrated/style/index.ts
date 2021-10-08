@@ -1,4 +1,5 @@
 import styled, {keyframes} from "styled-components";
+import {size} from "../../../../../constants";
 
 const bounce = keyframes`
     0%{
@@ -68,4 +69,25 @@ export const BgWrapper = styled.div`
         bottom: 0;
         animation: ${bounce} .7s 0s infinite;
     }
+    
+  @media (max-width: ${size.mobileL}) {
+    .image {
+        width: 35vh;
+        height: 35vh;
+    }
+    
+    img.astronaut {
+        width: 15vh;
+    }
+    
+    strong {
+        font-size: 1em;
+        
+        i {
+            font-size: 2em;
+            right: -12px;
+            top: -10px;
+        }
+    }
+  }
 `;

@@ -1,6 +1,6 @@
 import React, {memo} from "react";
 import styled from "styled-components";
-import {SHOTS_PER_PAGE} from "../../../../constants";
+import {SHOTS_PER_PAGE, size} from "../../../../constants";
 import axios from 'axios';
 import ImageCard from "../../../../common/image-card";
 import LoaderUI from "../../../../common/loader";
@@ -8,6 +8,12 @@ import LoaderUI from "../../../../common/loader";
 const GalleryWrapper = styled.div`
     min-height: 300px;
     padding: 3em 5em;
+    
+  @media (max-width: ${size.mobileL}) {
+    & {
+        padding: 1em 0em;
+    }
+  }
     
     img {
         object-position: center;
@@ -70,13 +76,13 @@ const GalleryPortfolio: React.FC<{}> = () => {
         <GalleryWrapper>
             <h1>My iBirdy Gallery</h1>
             {
-                isLoading ? <LoaderUI /> : null
+                isLoading ? <LoaderUI/> : null
             }
             <div className="grid">
                 {
                     dribbblePosts.map((item: any) => {
                         return (
-                            <ImageCard key={item.id} item={item} />
+                            <ImageCard key={item.id} item={item}/>
                         );
                     })
                 }

@@ -1,11 +1,18 @@
 import {memo} from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import Logo from './../../assets/images/logo.svg';
 import {Link} from "react-router-dom";
+import {device, size} from "../../constants";
 
 const HeaderWrapper = styled.div`
   position: absolute;
-  margin: 20px 50% 0;
+  width: 100%;
+  height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   z-index: 9;
 
   img {

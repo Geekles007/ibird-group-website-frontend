@@ -1,6 +1,7 @@
 import {memo} from "react";
 import ArrowDown from './../../../../assets/icons/down-arrow.png';
 import styled, {keyframes} from "styled-components";
+import {size} from "../../../../constants";
 
 const goDownAnimated = keyframes`
     0% {
@@ -24,6 +25,10 @@ const GoDownWrapper = styled.div`
     img{
         width: 2.5em;
     }
+    
+  @media (max-width: ${size.laptop}) {
+    display: none; 
+  }
 `;
 
 const GoDownButton: React.FC<{}> = () => {
