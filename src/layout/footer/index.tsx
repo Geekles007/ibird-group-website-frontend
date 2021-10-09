@@ -30,6 +30,11 @@ const FooterWrapper = styled.div`
         color: ${({theme}) => theme.accentColor};
       }
       
+      a {
+        text-decoration: none;
+        color: ${({theme}) => theme.accentColor};
+      }
+      
       span{
         color: #fff;
         margin-bottom: .5em;
@@ -69,7 +74,7 @@ const FooterWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    padding: 0 3em;
+    padding: 0 5em;
     
     border-top: 2px solid ${({theme}) => theme.accentColor};
 
@@ -103,17 +108,21 @@ const FooterUI: React.FC = () => {
         <FooterWrapper id={"hire-us"}>
             <div className="contacts contacts-mobile">
                 <h2>iBIRD DESIGN</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda, consequuntur debitis delectus illo ipsam.</p>
-                <span className="phone-number">+7 (993) 333 43 32 33</span>
-                <span className="email">hi@ibird-group.com</span>
+                <p>Hello all 😊, we are very glad to see you here. We are a very young company, very passionated and we really like what we do.
+                    We always try to provide the best of ourselves to our customer. So just let us amaze you and make your business shine bright like a diamond. <a
+                        href="https://www.youtube.com/watch?v=lWA2pjMjpBs" target={"_blank"}>Rihanna - Diamonds 🎧</a> </p>
+                <span className="phone-number">+7 (996) 065 68 23</span>
+                <span className="email">tondjilee@gmail.com</span>
                 <span className={"my-location"}>Nizhny Novgorod, Gagarina (Nizhny Novgorod Oblast)</span>
             </div>
             <div className="top-footer">
                 <div className="contacts contacts-desktop">
                     <h2>iBIRD DESIGN</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda, consequuntur debitis delectus illo ipsam.</p>
-                    <span className="phone-number">+7 (993) 333 43 32 33</span>
-                    <span className="email">hi@ibird-group.com</span>
+                    <p>Hello all 😊, we are very glad to see you here. We are a very young company, very passionated and we really like what we do.
+                        We always try to provide the best of ourselves to our customer. So just let us amaze you and make your business shine bright like a diamond. <a
+                            href="https://www.youtube.com/watch?v=lWA2pjMjpBs" target={"_blank"}>Rihanna - Diamonds 🎧</a></p>
+                    <span className="phone-number">+7 (996) 065 68 23</span>
+                    <span className="email">tondjilee@gmail.com</span>
                     <span className={"my-location"}>Nizhny Novgorod, Gagarina (Nizhny Novgorod Oblast)</span>
                 </div>
                 <div className="location">

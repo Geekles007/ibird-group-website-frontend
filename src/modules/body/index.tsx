@@ -10,6 +10,7 @@ import ClapCounter from "./components/clap-counter";
 import Illustrated from "./components/illustrated";
 import GalleryPortfolio from "./components/gallery-portofolio";
 import FooterUI from './../../layout/footer'
+import ScrollToTop from "./components/scroll-to-top-button";
 
 const BodyUI = () => {
 
@@ -24,6 +25,7 @@ const BodyUI = () => {
                 <Illustrated />
             </HomeWrapper>
             <GalleryPortfolio />
+            <ScrollToTop />
             <FooterUI />
         </ThemeProvider>
     );

@@ -38,7 +38,8 @@ const VisualStyleUI = ({form}: VisualStyleUIProps) => {
                 </div>
                 <div className={"form-control"}>
                     <label htmlFor="color">Style attributes</label>
-                    <StyleAttributeHandler form={form} />
+                    {/*<StyleAttributeHandler form={form} />*/}
+                    {/* TODO We will rebuilt it fromscratch */}
                 </div>
             </div>
         </VisualStyleWrapper>

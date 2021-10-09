@@ -1,22 +1,8 @@
 @import 'carbon-components/scss/globals/scss/styles.scss';
 
-@import 'carbon-components/scss/globals/grid/grid';
-
 $feature-flags: (
         grid-columns-16: true,
 );
-
-@import '@carbon/motion/scss/motion.scss';
-.my-custom-selector {
-  // Supplies the standard easing curve, using the productive mode by default
-  transition-timing-function: carbon--motion(standard);
-}
-
-.default-anim {
-  // Supplies the standard easing curve, but with the expressive mode, on the
-  // transition-timing-function property for this selector
-  @include carbon--motion(standard, expressive);
-}
 
 @font-face {
   font-family: 'gilroy';

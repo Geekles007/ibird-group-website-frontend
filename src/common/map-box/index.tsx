@@ -1,7 +1,9 @@
 import React, {memo, useEffect, useRef, useState} from "react";
+
 import mapboxgl from 'mapbox-gl';
 import {observer} from "mobx-react";
 import styled from "styled-components";
+import {REACT_APP_MAP_BOX_TOKEN} from "../../constants";
 
 interface MapBoxUIProps {
 }
@@ -11,7 +13,7 @@ const MapWrapper = styled.div`
     height: 100%;
 `;
 
-mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX_TOKEN ?? "";
+mapboxgl.accessToken = REACT_APP_MAP_BOX_TOKEN;
 
 const MapBoxUI: React.FC<MapBoxUIProps> = ({}) => {
     const mapContainer: any = useRef(null);
@@ -49,5 +51,11 @@ const MapBoxUI: React.FC<MapBoxUIProps> = ({}) => {
     );
 
 }
+
+// The following is required to stop "npm build" from transpiling mapbox code.
+// notice the exclamation point in the import.
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 export default observer(MapBoxUI);

@@ -2,6 +2,7 @@ import {memo} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {size} from "../../../../constants";
+import {Button} from "carbon-components-react";
 
 const HireWrapper = styled.div`
   height: 60px;
@@ -27,7 +28,7 @@ const HireWrapper = styled.div`
     margin-right: 1em;
   }
 
-  a {
+  button {
     height: 100%;
     width: 100px;
     bordeR: none;
@@ -60,11 +61,15 @@ const HireWrapper = styled.div`
 
 const HireUsUI: React.FC<{}> = () => {
 
+    const scrollToEnd = () => {
+        window.scrollTo(0,document.body.scrollHeight);
+    }
+
     return (
         <HireWrapper>
             <p>We can't wait to make our creativity <br/>
                 and passion at your service </p>
-            <Link to={"#hire-us"} type={"button"}>HIRE US</Link>
+            <button onClick={scrollToEnd} type={"button"}>HIRE US</button>
         </HireWrapper>
     );
 
