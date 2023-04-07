@@ -41,6 +41,7 @@
     "react-hook-form": "^7.15.0",
     "react-images": "^1.2.0-beta.7",
     "react-map-gl": "^6.1.17",
+    "react-messenger-customer-chat": "^0.8.0",
     "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^5.2.0",
     "react-router-transition": "^2.1.0",
